@@ -1,0 +1,24 @@
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
+
+var functionCalls = 0
+fun main() {
+    GlobalScope.launch { compleMessage() }
+    GlobalScope.launch { improveMessage() }
+    print("Hello,")
+    Thread.sleep(2000L)
+    println("There have been $functionCalls calls so far")
+}
+
+suspend fun compleMessage() {
+    delay(500L)
+    println(" World!")
+    functionCalls++
+}
+
+suspend fun improveMessage() {
+    delay(1000L)
+    println("Suspend functions are cool")
+    functionCalls++
+}
