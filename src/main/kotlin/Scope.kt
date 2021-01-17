@@ -1,3 +1,4 @@
+import javafx.application.Application.launch
 import kotlinx.coroutines.*
 
 suspend fun main(){
@@ -21,4 +22,6 @@ suspend fun main(){
         }
     }
     println("Program has finished")
+
+
 }
