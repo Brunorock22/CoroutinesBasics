@@ -1,4 +1,3 @@
-import javafx.application.Application.launch
 import kotlinx.coroutines.*
 
 suspend fun main(){
